@@ -345,6 +345,8 @@ MonoBehaviour:
   sceneAudButton: {fileID: 1619668156}
   selectedScenarioSO: {fileID: 11400000, guid: 269e4b9b3e9f9403187e207461d4db25, type: 2}
   selectedScenarioObj: {fileID: 413999162}
+  corrAud: {fileID: 8300000, guid: 0c1eef15fa2f84403acbf375c45fe217, type: 3}
+  wrongAud: {fileID: 8300000, guid: 702a34b354ebb420d8ac8934acd41249, type: 3}
 --- !u!1 &291030935
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +997,8 @@ GameObject:
   - component: {fileID: 821170654}
   - component: {fileID: 821170651}
   - component: {fileID: 821170655}
+  - component: {fileID: 821170656}
+  - component: {fileID: 821170657}
   m_Layer: 5
   m_Name: BeeFlying
   m_TagString: Untagged
@@ -1109,6 +1113,31 @@ MonoBehaviour:
   clickable: {fileID: 11400000, guid: e708489d118d141c4a22455ec28ff8dc, type: 2}
   wordString: {fileID: 0}
   tile: {fileID: 0}
+--- !u!114 &821170656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821170649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d12d09bc79d442959ce3627b3344f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &821170657
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821170649}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 166.72, y: 148.76, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &930724374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,6 +2195,7 @@ GameObject:
   - component: {fileID: 1623032502}
   - component: {fileID: 1623032503}
   - component: {fileID: 1623032504}
+  - component: {fileID: 1623032505}
   m_Layer: 5
   m_Name: BearWalking
   m_TagString: Untagged
@@ -2293,6 +2323,18 @@ MonoBehaviour:
   clickable: {fileID: 11400000, guid: 65f31538a84584c1888a35f90136a95a, type: 2}
   wordString: {fileID: 0}
   tile: {fileID: 0}
+--- !u!114 &1623032505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623032496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d12d09bc79d442959ce3627b3344f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1706506608
 GameObject:
   m_ObjectHideFlags: 0

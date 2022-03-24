@@ -91,7 +91,7 @@ public class PlaySceneManager : MonoBehaviour
             numErrors++;
             if (numErrors == 3)
             {
-                clickableObjects[curItem].GetComponent<DisplayClickable>().HighlightCorrectItem();
+                clickableObjects[curItem].transform.GetChild(0).GetComponent<DisplayClickable>().HighlightCorrectItem();
             }
         }
 
@@ -101,7 +101,7 @@ public class PlaySceneManager : MonoBehaviour
             numItemsDropped++;
             curItem++;
             //scoreText.text = "" + curItem;
-
+            
             StartCoroutine(AfterCorrDrop());
         }
     }
@@ -111,8 +111,8 @@ public class PlaySceneManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         sceneAudButton.interactable = false;
         yield return new WaitUntil(() => !audioSource.isPlaying);
-        audioSource.PlayOneShot(selectedScenarioSO.repeaterPhraseAud);
-
+        //audioSource.PlayOneShot(selectedScenarioSO.repeaterPhraseAud);
+        clickableObjects[curItem-1].transform.GetChild(0).GetComponent<MoveObjectTo>().OnCorrClick();
         if (numItemsDropped == clickables.Count)
         {
             yield return new WaitForSeconds(1);
@@ -121,7 +121,7 @@ public class PlaySceneManager : MonoBehaviour
         }
         else
         {
-            clickableObjects[curItem].GetComponent<MoveObjectTo>().OnCorrClick();
+            
             StartCoroutine(InstructDragging(curItem));
         }
     }
@@ -132,7 +132,7 @@ public class PlaySceneManager : MonoBehaviour
         selectedScenarioUI.ShowSuccess();
         //big particle effect
         yield return new WaitUntil(() => !audioSource.isPlaying);
-        audioSource.PlayOneShot(selectedScenarioSO.successPhraseAud);
+        //audioSource.PlayOneShot(selectedScenarioSO.successPhraseAud);
         yield return new WaitWhile(() => audioSource.isPlaying);
         ShowCompletionScreen();
     }

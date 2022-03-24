@@ -23,10 +23,11 @@ public class Target : MonoBehaviour, IPointerClickHandler
         {
             clicked = true;
             GetComponent<BoxCollider>().enabled = false;
-
+            Debug.Log("corr object name: " + playManagerScript.clickableObjects[playManagerScript.curItem].transform.GetChild(0).name);
+            Debug.Log("clicked object name: " + gameObject.name);
             if (gameObject.name == playManagerScript.clickableObjects[playManagerScript.curItem].transform.GetChild(0).name)
                 {
-                    GetComponent<DisplayClickable>().HighlightCorrectItem();
+                    //GetComponent<DisplayClickable>().HighlightCorrectItem();
                     playManagerScript.CountItemsLayered(true);
                 }
 
@@ -34,12 +35,11 @@ public class Target : MonoBehaviour, IPointerClickHandler
                 {
                     //Debug.Log("target tags don't match" + "; gameobj tag: " + gameObject.tag + "; targetNum: " + challengeSpawnManagerScript.targetTagNum);
                     //transform.GetChild(0).gameObject.SetActive(true);
-                    playManagerScript.CountItemsLayered(true);
+                    playManagerScript.CountItemsLayered(false);
 
             }
         }
 
-        }
-    
-    
+    }
+
 }

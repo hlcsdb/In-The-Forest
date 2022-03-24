@@ -22,17 +22,19 @@ MonoBehaviour:
   sceneDescription: []
   openerPhrase: []
   repeaterPhrase:
-  - find the X
-  - find the X
-  successPhrase: []
+  - 'find the '
+  - 'find the '
+  successPhrase:
+  - way to go
+  - way to go
   completionPhrase: []
   sceneDescriptionAud: {fileID: 0}
   openerPhraseAud: {fileID: 0}
-  repeaterPhraseAud: {fileID: 0}
-  successPhraseAud: {fileID: 0}
+  repeaterPhraseAud: {fileID: 8300000, guid: 29f486dfe630c4b9391e1ba4787cbbd8, type: 3}
+  successPhraseAud: {fileID: 8300000, guid: 40e81a24d8a154db681a8b39a9075b46, type: 3}
   completionPhraseAud: {fileID: 0}
   incorrectSelectionAud: {fileID: 0}
-  numClickables: 0
+  numClickables: 2
   backgroundImage: {fileID: 0}
   dialect: 0
   randSlots:
