@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class MoveObjectTo : MonoBehaviour, IPointerClickHandler
+public class MoveObjectTo : MonoBehaviour
 {
     Animator anim;
     public float exitDur;
@@ -42,7 +42,7 @@ public class MoveObjectTo : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnCorrClick()
     {
         Debug.Log("clicked");
         anim.SetBool("move", true);

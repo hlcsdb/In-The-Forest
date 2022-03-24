@@ -16,20 +16,24 @@ MonoBehaviour:
   description: 
   wordString:
   - bear
-  - 
+  - "spe\u2019uth"
   - 
   customInstructionText:
   - 
   - 
   - 
+  tile: {fileID: 0}
   itemSprite: {fileID: 0}
-  destroyAnimation: {fileID: 0}
   thisRandIndex: 0
   clicked: 0
   correct: 0
   dialect: 1
-  audioClip: {fileID: 0}
-  clickInstruction: {fileID: 0}
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
+  - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
+  audioClip: {fileID: 8300000, guid: 236b11ef130ed4d5ba4e135c851d3507, type: 3}
+  clickInstruction: {fileID: 8300000, guid: 236b11ef130ed4d5ba4e135c851d3507, type: 3}
   selectionPos: {x: 0, y: 0}
   startPos: {x: 0, y: 0}
   activeInScenario: 1

@@ -16,20 +16,24 @@ MonoBehaviour:
   description: 
   wordString:
   - bee
-  - 
+  - "sum\u2019suma\u2019yu"
   - 
   customInstructionText:
   - 
   - 
   - 
+  tile: {fileID: 0}
   itemSprite: {fileID: 0}
-  destroyAnimation: {fileID: 0}
-  thisRandIndex: 0
+  thisRandIndex: 1
   clicked: 0
   correct: 0
   dialect: 1
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
+  - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
   audioClip: {fileID: 8300000, guid: d12c251a440d74018b6ed472b508074c, type: 3}
-  clickInstruction: {fileID: 0}
+  clickInstruction: {fileID: 8300000, guid: d12c251a440d74018b6ed472b508074c, type: 3}
   selectionPos: {x: 0, y: 0}
   startPos: {x: 0, y: 0}
   activeInScenario: 1

@@ -16,6 +16,9 @@ public class DisplayClickable : MonoBehaviour
     //internal Vector2 randPos;
     internal int randI;
 
+    private float timer = 0.0f;
+    private float scaleDur = 0.1f;
+
     public void Start()
     {
         clickable.startPos = transform.localPosition;
@@ -64,8 +67,49 @@ public class DisplayClickable : MonoBehaviour
         tile.SetActive(true);
     }
 
-    //public Vector2 ThisRandomPos()
-    //{
-    //    return randPos;
-    //}
+    public void HighlightCorrectItem()
+    {
+        //StartCoroutine(TwistDraggable());
+        StartCoroutine(GrowShrinkLoop());
+    }
+
+    public IEnumerator GrowShrinkLoop()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            StartCoroutine(Grow(1.2f));
+            yield return new WaitForSeconds(0.2f);
+            StartCoroutine(Shrink(0.5f));
+            yield return new WaitForSeconds(0.2f);
+
+        }
+        StartCoroutine(Grow(1f));
+    }
+    private IEnumerator Grow(float maxSize)
+    {
+        Vector2 startScale = transform.localScale;
+        Vector2 maxScale = new Vector2(maxSize, maxSize);
+        do
+        {
+            transform.localScale = Vector3.Lerp(startScale, maxScale, timer / scaleDur);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        while (timer < scaleDur);
+        timer = 0;
+    }
+
+    private IEnumerator Shrink(float minSize)
+    {
+        Vector2 startScale = transform.localScale;
+        Vector2 minScale = new Vector2(minSize, minSize);
+        do
+        {
+            transform.localScale = Vector3.Lerp(startScale, minScale, timer / scaleDur);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        while (timer < scaleDur);
+        timer = 0;
+    }
 }
