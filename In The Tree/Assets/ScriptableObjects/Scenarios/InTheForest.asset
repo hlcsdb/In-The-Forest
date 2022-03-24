@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 401b50f7214614335bbd0793aaab8879, type: 3}
+  m_Name: InTheForest
+  m_EditorClassIdentifier: 
+  scenarioObject: {fileID: 0}
+  scenarioType: 0
+  scenarioName: 
+  scenarioDraggableObjects: []
+  scenarioClickableItems: []
+  sceneDescription: []
+  openerPhrase: []
+  repeaterPhrase: []
+  successPhrase: []
+  completionPhrase: []
+  sceneDescriptionAud: {fileID: 0}
+  openerPhraseAud: {fileID: 0}
+  repeaterPhraseAud: {fileID: 0}
+  successPhraseAud: {fileID: 0}
+  completionPhraseAud: {fileID: 0}
+  incorrectSelectionAud: {fileID: 0}
+  numDraggables: 0
+  backgroundImage: {fileID: 0}
+  dialect: 0
+  randSlots: []
