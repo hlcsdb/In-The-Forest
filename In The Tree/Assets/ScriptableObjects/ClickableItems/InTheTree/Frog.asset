@@ -10,24 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f40e632463a03465988c7dfa11344b75, type: 3}
-  m_Name: Fish
+  m_Name: Frog
   m_EditorClassIdentifier: 
   type: 0
   description: 
   wordString:
-  - fish
+  - frog
   - 
   - 
   customInstructionText:
   - 
   - 
   - 
+  tile: {fileID: 0}
   itemSprite: {fileID: 0}
-  destroyAnimation: {fileID: 0}
   thisRandIndex: 0
   clicked: 0
   correct: 0
   dialect: 1
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
+  - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
   audioClip: {fileID: 0}
   clickInstruction: {fileID: 0}
   selectionPos: {x: 0, y: 0}

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8ab7b4650d0354eeb9f7f0187abe80a4
+guid: 32de314e273674ffc9bb11ca62aee765
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -140,139 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Eagle_SpriteSheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1449
-        width: 1217.5
-        height: 1449
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6c82b0ebf54f4e67be74860f159763c
-      internalID: -371759034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eagle_SpriteSheet_1
-      rect:
-        serializedVersion: 2
-        x: 1217
-        y: 1449
-        width: 1217.5
-        height: 1449
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53f659ca27cd64326a2a96d40a63e81d
-      internalID: 1159371885
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eagle_SpriteSheet_2
-      rect:
-        serializedVersion: 2
-        x: 2434
-        y: 1449
-        width: 1217.5
-        height: 1449
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abcc20c23f77241958baa7399846c375
-      internalID: 1921350241
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eagle_SpriteSheet_3
-      rect:
-        serializedVersion: 2
-        x: 3651
-        y: 1449
-        width: 1217.5
-        height: 1449
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62e18622d6b3544ef996521eebd3c6d6
-      internalID: 2057214438
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eagle_SpriteSheet_4
-      rect:
-        serializedVersion: 2
-        x: 4868
-        y: 1449
-        width: 1217.5
-        height: 1449
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5c3bd89f0bc7476e94ea38a68989602
-      internalID: -1028142554
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eagle_SpriteSheet_5
-      rect:
-        serializedVersion: 2
-        x: 6085
-        y: 1449
-        width: 1217.5
-        height: 1449
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93a1bcfdb49564802b7cd72687268eec
-      internalID: -670530324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eagle_SpriteSheet_6
+      name: Frog_SpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1217.5
-        height: 1449
+        width: 1287.4
+        height: 1574
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3db77d4e70788491691592c584193ef1
-      internalID: -1059380250
+      spriteID: 1e1d7ce22faa64f2fa0283c9e2cc031d
+      internalID: -869731678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Eagle_SpriteSheet_7
+      name: Frog_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 1217
+        x: 1287
         y: 0
-        width: 1217.5
-        height: 1449
+        width: 1287.4
+        height: 1574
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6887870bf052c4702ab4c279face67ae
-      internalID: 1204061196
+      spriteID: 5609b3d126fc04a30af501a756d303bc
+      internalID: 1891331070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Eagle_SpriteSheet_8
+      name: Frog_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 2434
+        x: 2574
         y: 0
-        width: 1217.5
-        height: 1449
+        width: 1287.4
+        height: 1574
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b00d36d58a29b4e0c9608264db957339
-      internalID: -1304564986
+      spriteID: 1a2896e14590b4441a56f55f70fc9854
+      internalID: 573703859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Eagle_SpriteSheet_9
+      name: Frog_SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 3651
+        x: 3861
         y: 0
-        width: 1217.5
-        height: 1449
+        width: 1287.4
+        height: 1574
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2aa333368e03149a1a75683710f2e2b7
-      internalID: -1241708274
+      spriteID: d8c2e338d725940c9b6903cbdec20eb1
+      internalID: 10866484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Eagle_SpriteSheet_10
+      name: Frog_SpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 4868
+        x: 5148
         y: 0
-        width: 1217.5
-        height: 1449
+        width: 1287.4
+        height: 1574
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,29 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3122022f8ddb5439cacaf6391bf1ce06
-      internalID: 34399666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eagle_SpriteSheet_11
-      rect:
-        serializedVersion: 2
-        x: 6085
-        y: 0
-        width: 1217.5
-        height: 1449
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d310fe4cfe8cf4c30b867222d53bdc2f
-      internalID: 72104619
+      spriteID: 4a3390651426049c3ba3189a0c8a881c
+      internalID: 15841658
       vertices: []
       indices: 
       edges: []
@@ -394,7 +247,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 7d3c08f9b60ad461880063347a14937f
     internalID: 0
     vertices: []
     indices: 
@@ -402,18 +255,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Eagle_SpriteSheet_6: -1059380250
-      Eagle_SpriteSheet_0: -371759034
-      Eagle_SpriteSheet_1: 1159371885
-      Eagle_SpriteSheet_5: -670530324
-      Eagle_SpriteSheet_10: 34399666
-      Eagle_SpriteSheet_3: 2057214438
-      Eagle_SpriteSheet_2: 1921350241
-      Eagle_SpriteSheet_9: -1241708274
-      Eagle_SpriteSheet_4: -1028142554
-      Eagle_SpriteSheet_11: 72104619
-      Eagle_SpriteSheet_7: 1204061196
-      Eagle_SpriteSheet_8: -1304564986
+      Frog_SpriteSheet_4: 15841658
+      Frog_SpriteSheet_0: -869731678
+      Frog_SpriteSheet_1: 1891331070
+      Frog_SpriteSheet_2: 573703859
+      Frog_SpriteSheet_3: 10866484
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
