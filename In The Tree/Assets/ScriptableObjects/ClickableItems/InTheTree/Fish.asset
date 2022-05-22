@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40e632463a03465988c7dfa11344b75, type: 3}
+  m_Name: Fish
+  m_EditorClassIdentifier: 
+  type: 0
+  description: 
+  wordString:
+  - fish
+  - 
+  - 
+  customInstructionText:
+  - 
+  - 
+  - 
+  itemSprite: {fileID: 0}
+  destroyAnimation: {fileID: 0}
+  thisRandIndex: 0
+  clicked: 0
+  correct: 0
+  dialect: 1
+  audioClip: {fileID: 0}
+  clickInstruction: {fileID: 0}
+  selectionPos: {x: 0, y: 0}
+  startPos: {x: 0, y: 0}
+  activeInScenario: 0

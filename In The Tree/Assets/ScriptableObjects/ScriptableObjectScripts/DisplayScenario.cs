@@ -19,6 +19,7 @@ public class DisplayScenario : MonoBehaviour
     public AudioClip completionPhraseAud;
     public Image backgroundImage;
     private List<Vector2> startSlots;
+    
 
 
     // Start is called before the first frame update
@@ -41,7 +42,6 @@ public class DisplayScenario : MonoBehaviour
         }
     }
 
-
     public void ShowDescription()
     {
         sceneText.text = scenario.sceneDescription[scenario.dialect];
@@ -49,12 +49,12 @@ public class DisplayScenario : MonoBehaviour
 
     public void ShowRepeater(string wordText)
     {
-        sceneText.text = "" + scenario.repeaterPhrase[1] + wordText;
+        sceneText.text = "" + scenario.repeaterPhrase[scenario.dialect] + " " + wordText + "?";
     }
 
-    public void ShowCustomInstruction(string customInstructionText)
+    public void ShowCustomInstruction(string itemName)
     {
-        sceneText.text = "" + customInstructionText;
+        sceneText.text = "" + scenario.repeaterPhrase[scenario.dialect] + " " + itemName + "?";
     }
 
     public void EmptyScenarioText()
@@ -62,7 +62,7 @@ public class DisplayScenario : MonoBehaviour
         sceneText.text = "";
     }
 
-    public void ShowSuccess()
+    public void ShowSuccessText()
     {
         sceneText.text = scenario.successPhrase[scenario.dialect];
     }
@@ -75,5 +75,15 @@ public class DisplayScenario : MonoBehaviour
     public void ShowScenarioName()
     {
         scenarioName.text = scenario.scenarioName;
+    }
+
+    public void ShowFailureText()
+    {
+        sceneText.text = scenario.failurePhrase[scenario.dialect];
+    }
+
+    public void ShowFeedbackText(string feedbackText)
+    {
+        sceneText.text = feedbackText;
     }
 }

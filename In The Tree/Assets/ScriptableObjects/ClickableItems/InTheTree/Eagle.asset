@@ -22,6 +22,14 @@ MonoBehaviour:
   - 
   - 
   - 
+  clickFeedbackTextA:
+  - Fly away, bald eagle!
+  - "nem\u2019 lhakw\u2019, yuxwule\u2019! "
+  - 
+  clickFeedbackTextB:
+  - Goodbye, bald eagle!
+  - "hey\u2019ewulh, yuxwule\u2019! "
+  - 
   tile: {fileID: 0}
   itemSprite: {fileID: 0}
   thisRandIndex: 0
@@ -32,8 +40,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
-  audioClip: {fileID: 0}
-  clickInstruction: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: c331b63e66a3249f888a1da6c16f30a2, type: 3}
+  clickInstruction: {fileID: 8300000, guid: 4effe445525ca4da499f32aa05b0a6e6, type: 3}
+  clickFeedbackA: {fileID: 8300000, guid: c18597b221dbd46e3b03db374a372d05, type: 3}
+  clickFeedbackB: {fileID: 8300000, guid: 5f42f01e6ddc04880b1d7b8b87da7fe5, type: 3}
   selectionPos: {x: 0, y: 0}
   startPos: {x: 0, y: 0}
   activeInScenario: 0

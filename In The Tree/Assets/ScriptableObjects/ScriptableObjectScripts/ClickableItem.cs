@@ -15,6 +15,8 @@ public class ClickableItem : ScriptableObject
     public string description;
     public string[] wordString = new string[3];
     public string[] customInstructionText = new string[3];
+    public string[] clickFeedbackTextA;
+    public string[] clickFeedbackTextB;
     public GameObject tile;
 
     public Sprite itemSprite;
@@ -26,6 +28,8 @@ public class ClickableItem : ScriptableObject
     public Color[] tileStateOutlineColors = new Color[] { new Color(1, 1, 1, 1), new Color(0.9882f, 0.9333f, 0.1294f, 1), new Color(0.9490f, 0.3294f, 0.1882f, 1f) };
     public AudioClip audioClip;
     public AudioClip clickInstruction;
+    public AudioClip clickFeedbackA;
+    public AudioClip clickFeedbackB;
     public Vector2 selectionPos;
     public Vector2 startPos;
     public bool activeInScenario;
@@ -49,7 +53,7 @@ public class ClickableItem : ScriptableObject
 
     public string InstructionString()
     {
-        string instruction = customInstructionText[dialect] + " " + wordString[dialect];
+        string instruction = customInstructionText[dialect] + " " + wordString[dialect] + "?";
         return instruction;
     }
 
@@ -90,6 +94,23 @@ public class ClickableItem : ScriptableObject
         return audioClip;
     }
 
+    public AudioClip GetFeedbackAud(string whichFeedback)
+    {
+        if (whichFeedback == "B")
+        {
+            return clickFeedbackB;
+        }
+        return clickFeedbackA;
+    }
+
+    public string GetFeedbackString(string whichFeedback)
+    {
+        if (whichFeedback == "A"){
+            return clickFeedbackTextA[dialect];
+        }
+        return clickFeedbackTextB[dialect];
+        
+    }
     public void ThisItemIndex(int thisIndex)
     {
         thisRandIndex = thisIndex;

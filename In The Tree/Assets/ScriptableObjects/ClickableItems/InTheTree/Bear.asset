@@ -22,6 +22,14 @@ MonoBehaviour:
   - 
   - 
   - 
+  clickFeedbackTextA:
+  - Walk away, bear!
+  - "\u2019imush, spe\u2019uth!"
+  - 
+  clickFeedbackTextB:
+  - Goodbye, bear!
+  - "hey\u2019ewulh, spe\u2019uth!"
+  - 
   tile: {fileID: 0}
   itemSprite: {fileID: 0}
   thisRandIndex: 0
@@ -32,8 +40,10 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
   - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
-  audioClip: {fileID: 8300000, guid: 236b11ef130ed4d5ba4e135c851d3507, type: 3}
-  clickInstruction: {fileID: 8300000, guid: 236b11ef130ed4d5ba4e135c851d3507, type: 3}
+  audioClip: {fileID: 8300000, guid: 5de1e4d5765d846708ea7d858e5611c0, type: 3}
+  clickInstruction: {fileID: 8300000, guid: f76eaf1e16f594caeb4b97a544c969d5, type: 3}
+  clickFeedbackA: {fileID: 8300000, guid: 7fd6c28dba97b46d1938faafae147229, type: 3}
+  clickFeedbackB: {fileID: 8300000, guid: 671e41c9bf03d40888567f2e7b1a5d6c, type: 3}
   selectionPos: {x: 0, y: 0}
   startPos: {x: 0, y: 0}
   activeInScenario: 1

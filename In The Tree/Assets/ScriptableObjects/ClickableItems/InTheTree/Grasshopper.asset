@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40e632463a03465988c7dfa11344b75, type: 3}
+  m_Name: Grasshopper
+  m_EditorClassIdentifier: 
+  type: 0
+  description: 
+  wordString:
+  - grasshopper
+  - "haputiil\u2019"
+  - 
+  customInstructionText:
+  - 
+  - 
+  - 
+  clickFeedbackTextA:
+  - Hop away, grasshopper!
+  - "nem\u2019 tstl\u2019um, haputiil\u2019!"
+  - 
+  clickFeedbackTextB:
+  - Goodbye, grasshopper!
+  - "hey\u2019ewulh, haputiil\u2019!"
+  - 
+  tile: {fileID: 0}
+  itemSprite: {fileID: 0}
+  thisRandIndex: 0
+  clicked: 0
+  correct: 0
+  dialect: 1
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
+  - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
+  audioClip: {fileID: 8300000, guid: c11bb6d3cfdcf475f8828a8348a6c670, type: 3}
+  clickInstruction: {fileID: 8300000, guid: 0b6644f9d61d54132a3cbef5a9696302, type: 3}
+  clickFeedbackA: {fileID: 8300000, guid: 51981cf74cfd24bdfba65d00002c7b39, type: 3}
+  clickFeedbackB: {fileID: 8300000, guid: ab3953f38cf314cf982104f2a00c532a, type: 3}
+  selectionPos: {x: 0, y: 0}
+  startPos: {x: 0, y: 0}
+  activeInScenario: 0

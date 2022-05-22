@@ -20,6 +20,8 @@ public class PlaySceneManager : MonoBehaviour
     int numErrors = 0;
     public AudioClip corrAud;
     public AudioClip wrongAud;
+    internal bool haltInput = true;
+
 
 
     // Start is called before the first frame update
@@ -52,7 +54,7 @@ public class PlaySceneManager : MonoBehaviour
         int iRand;
         for (int i = 0; i < numObjects; i++)
         {
-            iRand = Random.Range(0, 1);
+            iRand = Random.Range(0, iArr.Count);
             Debug.Log("irand:" + iRand);
             clickables.Add(tempDraggables[iArr[iRand]]);
             clickableObjects.Add(selectedScenarioObj.transform.GetChild(iArr[iRand]).gameObject);
@@ -66,10 +68,10 @@ public class PlaySceneManager : MonoBehaviour
     public IEnumerator InstructDragging(int curItem)
     {
         yield return new WaitUntil(() => !audioSource.isPlaying);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         if (clickables[curItem].IsInstructionCustom())
         {
-            selectedScenarioUI.ShowCustomInstruction(clickables[curItem].InstructionString());
+            selectedScenarioUI.ShowCustomInstruction(clickables[curItem].WordString());
         }
         else
         {
@@ -77,19 +79,21 @@ public class PlaySceneManager : MonoBehaviour
             selectedScenarioUI.ShowRepeater(clickables[curItem].WordString());
         }
 
-        audioSource.PlayOneShot(clickables[curItem].clickInstruction);
+        PlayInstructionAud();
 
         yield return new WaitUntil(() => !audioSource.isPlaying);
         sceneAudButton.interactable = true;
+        haltInput = false;
     }
-
+    
     public void CountItemsLayered(bool correct)
     {
-        PlayResultAud(correct);
+        haltInput = true;
         if (!correct)
         {
+            StartCoroutine(AfterWrongDrop());
             numErrors++;
-            if (numErrors == 3)
+            if (numErrors >= 3)
             {
                 clickableObjects[curItem].transform.GetChild(0).GetComponent<DisplayClickable>().HighlightCorrectItem();
             }
@@ -98,21 +102,41 @@ public class PlaySceneManager : MonoBehaviour
         else if (correct)
         {
             numErrors = 0;
-            numItemsDropped++;
-            curItem++;
-            //scoreText.text = "" + curItem;
-            
+            numItemsDropped++; //this might be redundant
             StartCoroutine(AfterCorrDrop());
         }
     }
 
+    public IEnumerator AfterWrongDrop()
+    {
+        sceneAudButton.interactable = false;
+        selectedScenarioUI.ShowFailureText();
+        audioSource.PlayOneShot(selectedScenarioSO.GetIncorrectAudio());
+        yield return new WaitUntil(() => !audioSource.isPlaying);
+
+        //yield return new WaitForSeconds(1);
+        PlayInstructionAud();
+        selectedScenarioUI.ShowCustomInstruction(clickables[curItem].WordString());
+        yield return new WaitUntil(() => !audioSource.isPlaying);
+        haltInput = false;
+        sceneAudButton.interactable = true;
+    }
+
     public IEnumerator AfterCorrDrop()
     {
-        yield return new WaitForSeconds(1);
         sceneAudButton.interactable = false;
+
+        audioSource.PlayOneShot(clickables[curItem].GetFeedbackAud("A"));
+        selectedScenarioUI.ShowFeedbackText(clickables[curItem].GetFeedbackString("A"));
         yield return new WaitUntil(() => !audioSource.isPlaying);
-        //audioSource.PlayOneShot(selectedScenarioSO.repeaterPhraseAud);
-        clickableObjects[curItem-1].transform.GetChild(0).GetComponent<MoveObjectTo>().OnCorrClick();
+
+        clickableObjects[curItem].transform.GetChild(0).GetComponent<MoveObjectTo>().OnCorrClick();
+
+        audioSource.PlayOneShot(clickables[curItem].GetFeedbackAud("B"));
+        selectedScenarioUI.ShowFeedbackText(clickables[curItem].GetFeedbackString("B"));
+        yield return new WaitUntil(() => !audioSource.isPlaying);
+        
+
         if (numItemsDropped == clickables.Count)
         {
             yield return new WaitForSeconds(1);
@@ -121,7 +145,8 @@ public class PlaySceneManager : MonoBehaviour
         }
         else
         {
-            
+            curItem++;
+            yield return new WaitForSeconds(1.5f);
             StartCoroutine(InstructDragging(curItem));
         }
     }
@@ -129,33 +154,35 @@ public class PlaySceneManager : MonoBehaviour
     public IEnumerator Success()
     {
         new WaitForSeconds(2);
-        selectedScenarioUI.ShowSuccess();
+        
         //big particle effect
         yield return new WaitUntil(() => !audioSource.isPlaying);
-        //audioSource.PlayOneShot(selectedScenarioSO.successPhraseAud);
-        yield return new WaitWhile(() => audioSource.isPlaying);
-        ShowCompletionScreen();
+        
+        new WaitForSeconds(1);
+        audioSource.PlayOneShot(selectedScenarioSO.GetSuccessAudio());
+        selectedScenarioUI.ShowSuccessText();
+        //ShowCompletionScreen();
     }
 
-    public IEnumerator ShowCompletionScreen()
-    {
-        yield return new WaitForSeconds(1);
-        yield return new WaitUntil(() => !audioSource.isPlaying);
+    //public IEnumerator ShowCompletionScreen()
+    //{
+    //    yield return new WaitForSeconds(1);
+    //    yield return new WaitUntil(() => !audioSource.isPlaying);
 
-        selectedScenarioUI.ShowCompletionText();
-        audioSource.PlayOneShot(selectedScenarioSO.completionPhraseAud);
-        yield return new WaitWhile(() => audioSource.isPlaying);
-    }
+    //    selectedScenarioUI.ShowCompletionText();
+    //    audioSource.PlayOneShot(selectedScenarioSO.GetCompletionAudio());
+    //    yield return new WaitUntil(() => !audioSource.isPlaying);
+    //}
 
-    public void SetDialect(int currDialect)
-    {
-        dialect = currDialect;
+    //public void SetDialect(int currDialect)
+    //{
+    //    dialect = currDialect;
 
-        foreach (ClickableItem draggableItem in clickables)
-        {
-            draggableItem.SetCurrDialect(currDialect);
-        }
-    }
+    //    foreach (ClickableItem draggableItem in clickables)
+    //    {
+    //        draggableItem.SetCurrDialect(currDialect);
+    //    }
+    //}
 
     public void ResetAllDraggableObjects()
     {
@@ -167,22 +194,8 @@ public class PlaySceneManager : MonoBehaviour
         clickableObjects.Clear();
     }
 
-    public void ReplaySceneAud()
+    public void PlayInstructionAud()
     {
-
         audioSource.PlayOneShot(clickables[curItem].clickInstruction);
     }
-
-    public void PlayResultAud(bool corr)
-    {
-        if(corr)
-        {
-            audioSource.PlayOneShot(corrAud);
-        }
-        else
-        {
-            audioSource.PlayOneShot(wrongAud);
-        }
-    }
-
 }

@@ -16,20 +16,34 @@ MonoBehaviour:
   description: 
   wordString:
   - squirrel
-  - 
+  - "tth\u2019upsi\u2019athun\u2019"
   - 
   customInstructionText:
   - 
   - 
   - 
+  clickFeedbackTextA:
+  - Go hide, squirrel!
+  - "nem\u2019 kweel, th\u2019upsi\u2019athun\u2019!"
+  - 
+  clickFeedbackTextB:
+  - Goodbye, squirrel!
+  - "hey\u2019ewulh, tth\u2019upsi\u2019athun\u2019!"
+  - 
+  tile: {fileID: 0}
   itemSprite: {fileID: 0}
-  destroyAnimation: {fileID: 0}
-  thisRandIndex: 0
+  thisRandIndex: 6
   clicked: 0
   correct: 0
   dialect: 1
-  audioClip: {fileID: 8300000, guid: eecb405612a6543c1b83b103e767a80f, type: 3}
-  clickInstruction: {fileID: 0}
+  tileStateOutlineColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9882, g: 0.9333, b: 0.1294, a: 1}
+  - {r: 0.949, g: 0.3294, b: 0.1882, a: 1}
+  audioClip: {fileID: 8300000, guid: d57f83ebc30e443a59a643af40878067, type: 3}
+  clickInstruction: {fileID: 8300000, guid: 64b3ea58b414f43398665d8f2b5e7c45, type: 3}
+  clickFeedbackA: {fileID: 8300000, guid: 48b72af13adf04c6dbc20ede69f2f0fb, type: 3}
+  clickFeedbackB: {fileID: 8300000, guid: 6377832ff351e40c28c3f6f1d524e567, type: 3}
   selectionPos: {x: 0, y: 0}
   startPos: {x: 0, y: 0}
   activeInScenario: 1
