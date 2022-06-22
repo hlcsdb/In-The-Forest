@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Home.unity
     guid: ab3e4878bceb64f0ba546c23ac576c17
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/InTheTreeVocab.unity
     guid: 61468ea52522146e7a7e09984021dc1b
   - enabled: 1
